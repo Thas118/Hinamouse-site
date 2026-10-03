@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="HinaMouse — VTuber и Twitch-стример. Ссылки на каналы, эфиры и сообщество." />
-    <meta name="twitch-status-api" content="" />
     <link rel="icon" type="image/png" href="assets/icons/hinamouse-avatar.png" />
     <title>HinaMouse — VTuber & Twitch</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,120 +14,68 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="hinamouse-page">
+  <body class="hinamouse-page link-page">
     <div class="page-shell">
       <main class="frame">
         <div class="frame-inner page-home">
-          <header class="masthead">
-            <div class="brand-block">
-              <h1>HinaMouse</h1>
-              <p>VTUBER · TWITCH STREAMER</p>
-            </div>
-          </header>
-
           <nav class="page-nav" aria-label="Разделы сайта">
             <a href="index.html" aria-current="page">Главная</a>
             <a href="about.html">Обо мне</a>
             <a href="schedule.html">Расписание</a>
-            <a href="clips.html">Клипы · в разработке</a>
             <a href="rules.html">Правила чата</a>
           </nav>
 
-          <section class="profile-card" aria-labelledby="profile-title">
+          <header class="profile-card" aria-labelledby="profile-title">
             <img
               class="profile-avatar"
               src="assets/icons/hinamouse-avatar.png"
-              alt="Аватар HinaMouse из публичного профиля Twitch"
-              width="112"
-              height="112"
+              alt="Аватар HinaMouse"
+              width="128"
+              height="128"
             />
             <div class="profile-copy">
-              <p class="eyebrow">ПРИВЕТ, Я</p>
-              <h2 id="profile-title">HinaMouse</h2>
-              <p>Мышь с ветчинками вместо ушей</p>
-              <a class="primary-link" href="https://www.twitch.tv/hinamouse">Мышиные стримы тут^^</a>
+              <p class="eyebrow">VTUBER · TWITCH STREAMER</p>
+              <h1 id="profile-title">HinaMouse</h1>
+              <p class="tagline">Мышь с ветчинками вместо ушей</p>
             </div>
-          </section>
+          </header>
 
-          <section class="live-panel" aria-labelledby="live-title">
-            <div class="live-copy">
-              <p class="eyebrow">TWITCH</p>
-              <h2 id="live-title">Сейчас на канале</h2>
-              <p class="about-copy">Если Хина в эфире, трансляция запустится здесь автоматически</p>
-              <p class="live-status" id="twitch-status" role="status" aria-live="polite" data-state="unconfigured">
-                Статус эфира пока не настроен
-              </p>
-            </div>
-            <iframe
-              class="live-player"
-              id="twitch-player"
-              title="Twitch-плеер HinaMouse"
-              allow="autoplay; fullscreen"
-              hidden
-            ></iframe>
-            <p class="live-fallback" id="live-fallback">
-              Встроенный эфир доступен на опубликованном сайте. <a href="https://www.twitch.tv/hinamouse">Открыть HinaMouse на Twitch</a>.
-            </p>
-          </section>
-
-          <section class="home-grid" aria-label="Кратко о канале">
-            <a class="home-card" href="about.html">
-              <img class="home-card-icon" src="assets/icons/about.svg" alt="" />
-              <span class="home-card-title">Обо мне</span>
-              <span class="home-card-copy">Игры, аниме, оборудование и команды.</span>
-              <span class="home-card-action">Подробнее →</span>
-            </a>
-            <a class="home-card" href="schedule.html">
-              <img class="home-card-icon" src="assets/icons/schedule.svg" alt="" />
-              <span class="home-card-title">Расписание</span>
-              <span class="home-card-copy">Расписание эфиров и анонсы стримов.</span>
-              <span class="home-card-action">Открыть →</span>
-            </a>
-            <a class="home-card" href="clips.html">
-              <img class="home-card-icon" src="assets/icons/clips.svg" alt="" />
-              <span class="home-card-title">Клипы</span>
-              <span class="home-card-copy">Раздел пока находится в разработке.</span>
-              <span class="home-card-action">Скоро →</span>
-            </a>
-            <a class="home-card" href="rules.html">
-              <img class="home-card-icon" src="assets/icons/rules.svg" alt="" />
-              <span class="home-card-title">Правила чата</span>
-              <span class="home-card-copy">Пожалуйста, прочитайте перед общением в чате.</span>
-              <span class="home-card-action">Прочитать →</span>
-            </a>
-          </section>
+          <a class="primary-link primary-cta" href="https://www.twitch.tv/hinamouse" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/twitch.svg" alt="" />
+            <span class="primary-cta-label">Смотреть на Twitch</span>
+            <span aria-hidden="true">↗</span>
+          </a>
 
           <footer class="site-footer">
             <div class="footer-groups">
               <section class="footer-group">
                 <p class="footer-title">СОЦСЕТИ</p>
                 <nav class="icon-links" aria-label="Социальные сети">
-              <a href="https://www.twitch.tv/hinamouse" aria-label="Twitch" title="Twitch"><img src="assets/icons/twitch.svg" alt="" /></a>
-              <a href="https://t.me/hinamouse" aria-label="Telegram" title="Telegram"><img src="assets/icons/telegram.svg" alt="" /></a>
-              <a href="https://discord.gg/e26DJBJG8C" aria-label="Discord" title="Discord"><img src="assets/icons/discord.svg" alt="" /></a>
-              <a href="https://www.youtube.com/@hinamouse" aria-label="YouTube" title="YouTube"><img src="assets/icons/youtube.svg" alt="" /></a>
-              <a href="https://steamcommunity.com/id/hinamouse" aria-label="Steam" title="Steam"><img src="assets/icons/steam.svg" alt="" /></a>
+                  <a href="https://www.twitch.tv/hinamouse" aria-label="Twitch" title="Twitch"><img src="assets/icons/twitch.svg" alt="" /></a>
+                  <a href="https://t.me/hinamouse" aria-label="Telegram" title="Telegram"><img src="assets/icons/telegram.svg" alt="" /></a>
+                  <a href="https://discord.gg/e26DJBJG8C" aria-label="Discord" title="Discord"><img src="assets/icons/discord.svg" alt="" /></a>
+                  <a href="https://www.youtube.com/@hinamouse" aria-label="YouTube" title="YouTube"><img src="assets/icons/youtube.svg" alt="" /></a>
+                  <a href="https://steamcommunity.com/id/hinamouse" aria-label="Steam" title="Steam"><img src="assets/icons/steam.svg" alt="" /></a>
                 </nav>
               </section>
               <section class="footer-group">
                 <p class="footer-title">ПОДДЕРЖАТЬ ХИНУ</p>
                 <nav class="icon-links" aria-label="Способы поддержки">
-              <a href="https://www.donationalerts.com/r/hinamouse" aria-label="DonationAlerts" title="DonationAlerts"><img src="assets/icons/donationalerts-official.png" alt="" /></a>
-              <a href="https://donatex.gg/donate/hinamouse" aria-label="DonateX" title="DonateX"><img src="assets/icons/donatex.svg" alt="" /></a>
-              <a href="https://fetta.app/u/hinamouse" aria-label="Fetta wishlist" title="Fetta wishlist"><img src="assets/icons/fetta.svg" alt="" /></a>
-              <a href="https://dalink.to/hinamouse" aria-label="DALink" title="DALink"><img class="dalink-icon" src="assets/icons/dalink-official.svg" alt="" /></a>
-              <a href="https://memealerts.com/hinamouse" aria-label="MemeAlerts" title="MemeAlerts"><img src="assets/icons/memealerts.png" alt="" /></a>
+                  <a href="https://www.donationalerts.com/r/hinamouse" aria-label="DonationAlerts" title="DonationAlerts"><img src="assets/icons/donationalerts-official.png" alt="" /></a>
+                  <a href="https://donatex.gg/donate/hinamouse" aria-label="DonateX" title="DonateX"><img src="assets/icons/donatex.svg" alt="" /></a>
+                  <a href="https://fetta.app/u/hinamouse" aria-label="Fetta wishlist" title="Fetta wishlist"><img src="assets/icons/fetta.svg" alt="" /></a>
+                  <a href="https://dalink.to/hinamouse" aria-label="DALink" title="DALink"><img class="dalink-icon" src="assets/icons/dalink-official.svg" alt="" /></a>
+                  <a href="https://memealerts.com/hinamouse" aria-label="MemeAlerts" title="MemeAlerts"><img src="assets/icons/memealerts.png" alt="" /></a>
                 </nav>
               </section>
             </div>
             <p class="footer-note">Официальные ссылки и способы поддержки</p>
             <div class="footer-bottom">
-              <p class="creator-note">made by <a class="creator-link" href="https://github.com/Thas118/Hinamouse-site" target="_blank" rel="noopener noreferrer">Thas118</a></p>
+              <p class="creator-note">made by Thas118</p>
             </div>
           </footer>
         </div>
       </main>
     </div>
-    <script src="twitch-player.js" defer></script>
   </body>
 </html>
