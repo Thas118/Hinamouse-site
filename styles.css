@@ -21,6 +21,10 @@ body {
   font-family: 'Rajdhani', sans-serif;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   min-height: 100vh;
   display: grid;
@@ -699,8 +703,8 @@ h1 span {
 }
 
 .hinamouse-page .page-nav {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 123px);
   justify-content: center;
   gap: 8px;
   margin: 0 0 18px;
@@ -720,15 +724,26 @@ h1 span {
   font-size: 0.88rem;
   font-weight: 800;
   text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.hinamouse-page .page-nav a {
+  width: 100%;
+  min-width: 0;
+  padding-right: 12px;
+  padding-left: 12px;
 }
 
 .hinamouse-page .page-nav a:hover,
-.hinamouse-page .page-nav a[aria-current="page"],
 .hinamouse-page .page-bottom a:hover {
   background: #725a91;
   color: #fff;
   transform: translateY(-1px);
+}
+
+.hinamouse-page .page-nav a[aria-current="page"] {
+  background: #725a91;
+  color: #fff;
 }
 
 .hinamouse-page .profile-card {
@@ -1092,6 +1107,8 @@ h1 span {
 
 @media (max-width: 600px) {
   .hinamouse-page .page-nav {
+    grid-template-columns: repeat(2, 123px);
+    justify-content: center;
     gap: 6px;
   }
 
@@ -1262,7 +1279,7 @@ h1 span {
   .hinamouse-page .page-nav a,
   .hinamouse-page .page-bottom a {
     min-height: 38px;
-    padding: 8px 16px;
+    padding: 8px 12px;
     font-size: 0.88rem;
   }
 
